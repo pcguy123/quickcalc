@@ -126,7 +126,23 @@ bool isOp(char input[])
        (input[0] == '-') ||
        (input[0] == '.') ||
        (input[0] == '*') ||
-       (input[0] == '/')))
+       (input[0] == '/') ||
+       (input[0] == '%') ||
+       (input[0] == '&') ||
+       (input[0] == 'a') ||
+       (input[0] == 'A') ||
+       (input[0] == '|') ||
+       (input[0] == 'o') ||
+       (input[0] == 'O') ||
+       (input[0] == '^') ||
+       (input[0] == 'x') ||
+       (input[0] == 'X') ||
+       (input[0] == '<') ||
+       (input[0] == 'l') ||
+       (input[0] == 'L') ||
+       (input[0] == '>') ||
+       (input[0] == 'r') ||
+       (input[0] == 'R')))
     {
         return false;
     }
@@ -276,6 +292,54 @@ int evaluate(std::vector<int>& nums, std::vector<char>& ops)
                 break;
             case('/'):
                 total /= nums[i];
+                break;
+            case('%'):
+                total %= nums[i];
+                break;
+            case('&'):
+                total &= nums[i];
+                break;
+            case('a'):
+                total &= nums[i];
+                break;
+            case('A'):
+                total &= nums[i];
+                break;
+            case('|'):
+                total |= nums[i];
+                break;
+            case('o'):
+                total |= nums[i];
+                break;
+            case('O'):
+                total |= nums[i];
+                break;
+            case('^'):
+                total ^= nums[i];
+                break;
+            case('x'):
+                total ^= nums[i];
+                break;
+            case('X'):
+                total ^= nums[i];
+                break;
+            case('<'):
+                total <<= nums[i];
+                break;
+            case('l'):
+                total <<= nums[i];
+                break;
+            case('L'):
+                total <<= nums[i];
+                break;
+            case('>'):
+                total >>= nums[i];
+                break;
+            case('r'):
+                total >>= nums[i];
+                break;
+            case('R'):
+                total >>= nums[i];
                 break;
             default:
                 total += nums[i];
