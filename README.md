@@ -8,6 +8,7 @@ Decimal | 1234 |
 Hexadecimal | 0x4d2 ("0x" then digits) |
 Octal | 02322 ("0" then digits) |
 Binary | 0b10011010010 ("0b" then bits) |
+
 &nbsp;
 
 Order of operations is strictly left to right.
